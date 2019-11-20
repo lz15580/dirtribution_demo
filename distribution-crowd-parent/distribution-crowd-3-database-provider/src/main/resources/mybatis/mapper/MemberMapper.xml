@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.crowd.mapper.MemberPOMapper">
+  <resultMap id="BaseResultMap" type="com.demo.crowd.entity.MemberPO">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="loginacct" jdbcType="VARCHAR" property="loginacct" />
+    <result column="userpswd" jdbcType="VARCHAR" property="userpswd" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="authstatus" jdbcType="TINYINT" property="authstatus" />
+    <result column="usertype" jdbcType="TINYINT" property="usertype" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="cardnum" jdbcType="VARCHAR" property="cardnum" />
+    <result column="acctype" jdbcType="TINYINT" property="acctype" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, loginacct, userpswd, username, email, authstatus, usertype, realname, cardnum, 
+    acctype
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_member
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_member
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.demo.crowd.MemberPO" useGeneratedKeys="true">
+    insert into t_member (loginacct, userpswd, username, 
+      email, authstatus, usertype, 
+      realname, cardnum, acctype
+      )
+    values (#{loginacct,jdbcType=VARCHAR}, #{userpswd,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{authstatus,jdbcType=TINYINT}, #{usertype,jdbcType=TINYINT}, 
+      #{realname,jdbcType=VARCHAR}, #{cardnum,jdbcType=VARCHAR}, #{acctype,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.demo.crowd.MemberPO" useGeneratedKeys="true">
+    insert into t_member
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="loginacct != null">
+        loginacct,
+      </if>
+      <if test="userpswd != null">
+        userpswd,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="authstatus != null">
+        authstatus,
+      </if>
+      <if test="usertype != null">
+        usertype,
+      </if>
+      <if test="realname != null">
+        realname,
+      </if>
+      <if test="cardnum != null">
+        cardnum,
+      </if>
+      <if test="acctype != null">
+        acctype,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="loginacct != null">
+        #{loginacct,jdbcType=VARCHAR},
+      </if>
+      <if test="userpswd != null">
+        #{userpswd,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="authstatus != null">
+        #{authstatus,jdbcType=TINYINT},
+      </if>
+      <if test="usertype != null">
+        #{usertype,jdbcType=TINYINT},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="cardnum != null">
+        #{cardnum,jdbcType=VARCHAR},
+      </if>
+      <if test="acctype != null">
+        #{acctype,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.crowd.MemberPO">
+    update t_member
+    <set>
+      <if test="loginacct != null">
+        loginacct = #{loginacct,jdbcType=VARCHAR},
+      </if>
+      <if test="userpswd != null">
+        userpswd = #{userpswd,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="authstatus != null">
+        authstatus = #{authstatus,jdbcType=TINYINT},
+      </if>
+      <if test="usertype != null">
+        usertype = #{usertype,jdbcType=TINYINT},
+      </if>
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="cardnum != null">
+        cardnum = #{cardnum,jdbcType=VARCHAR},
+      </if>
+      <if test="acctype != null">
+        acctype = #{acctype,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.crowd.MemberPO">
+    update t_member
+    set loginacct = #{loginacct,jdbcType=VARCHAR},
+      userpswd = #{userpswd,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      authstatus = #{authstatus,jdbcType=TINYINT},
+      usertype = #{usertype,jdbcType=TINYINT},
+      realname = #{realname,jdbcType=VARCHAR},
+      cardnum = #{cardnum,jdbcType=VARCHAR},
+      acctype = #{acctype,jdbcType=TINYINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

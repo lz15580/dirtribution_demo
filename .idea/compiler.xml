@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="atcrowdfunding-admin-1-webui" />
+        <module name="atcrowdfunding-admin-2-component" />
+        <module name="atcrowdfunding-admin-3-common" />
+        <module name="atcrowdfunding-admin-4-entity" />
+        <module name="distribution-crowd-1-common" />
+        <module name="distribution-crowd-2-registry-center" />
+        <module name="distribution-crowd-3-database-provider" />
+        <module name="distribution-crowd-4-redis-provider" />
+        <module name="distribution-crowd-5-member-manager" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aliyun-shortMsg" target="1.5" />
+      <module name="atcrowdfunding-admin-0-parent" target="1.5" />
+      <module name="atcrowdfunding-admin-1-webui" target="1.5" />
+      <module name="atcrowdfunding-admin-2-component" target="1.5" />
+      <module name="atcrowdfunding-admin-3-common" target="1.5" />
+      <module name="atcrowdfunding-admin-4-entity" target="1.5" />
+      <module name="distribution-crowd-1-common" target="7" />
+      <module name="distribution-crowd-2-registry-center" target="1.5" />
+      <module name="distribution-crowd-3-database-provider" target="1.5" />
+      <module name="distribution-crowd-4-redis-provider" target="1.5" />
+      <module name="distribution-crowd-5-member-manager" target="1.5" />
+      <module name="distribution-crowd-parent" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

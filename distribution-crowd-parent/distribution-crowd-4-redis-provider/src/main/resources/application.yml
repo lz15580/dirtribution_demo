@@ -1,0 +1,26 @@
+server:
+  port: 3000
+spring:
+  application:
+    name: redis-provider
+  redis: #redis基础配置
+      #    host: 127.0.0.1 #19.29.80.50 #Redis服务器地址
+      #host: 127.0.0.1
+      host: 101.132.134.219 #19.29.80.50 #Redis服务器地址
+      port: 6379 #Redis服务器连接端口
+      password: #654321 #Redis服务器连接密码（默认为空）
+      timeout: 3000 #连接超时时间（毫秒）
+      pool:
+        max-idle: 500 #连接池中的最大空闲连接，默认值也是8
+        min-idle: 50 #连接池中的最小空闲连接，默认值也是0
+        max-active: 2000 # 如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个jedis实例，则此时pool的状态为exhausted(耗尽)。
+        max-wait: 10000 # 等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。如果超过等待时间，则直接抛出JedisConnectionException
+    #    sentinel: #redis哨兵设置
+    #      master: master8026
+    #      nodes: 10.189.80.25:26379,10.189.80.26:26379,10.189.80.27:26378
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+  instance:
+    prefer-ip-address: true

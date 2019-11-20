@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-admin-0-parent.iml" filepath="$PROJECT_DIR$/atcrowdfunding-admin-0-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-admin-1-webui/atcrowdfunding-admin-1-webui.iml" filepath="$PROJECT_DIR$/atcrowdfunding-admin-1-webui/atcrowdfunding-admin-1-webui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-admin-2-component/atcrowdfunding-admin-2-component.iml" filepath="$PROJECT_DIR$/atcrowdfunding-admin-2-component/atcrowdfunding-admin-2-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-admin-3-common/atcrowdfunding-admin-3-common.iml" filepath="$PROJECT_DIR$/atcrowdfunding-admin-3-common/atcrowdfunding-admin-3-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atcrowdfunding-admin-4-entity/atcrowdfunding-admin-4-entity.iml" filepath="$PROJECT_DIR$/atcrowdfunding-admin-4-entity/atcrowdfunding-admin-4-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-1-common/distribution-crowd-1-common.iml" filepath="$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-1-common/distribution-crowd-1-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-2-registry-center/distribution-crowd-2-registry-center.iml" filepath="$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-2-registry-center/distribution-crowd-2-registry-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-3-database-provider/distribution-crowd-3-database-provider.iml" filepath="$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-3-database-provider/distribution-crowd-3-database-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-4-redis-provider/distribution-crowd-4-redis-provider.iml" filepath="$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-4-redis-provider/distribution-crowd-4-redis-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-5-member-manager/distribution-crowd-5-member-manager.iml" filepath="$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-5-member-manager/distribution-crowd-5-member-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-parent.iml" filepath="$PROJECT_DIR$/distribution-crowd-parent/distribution-crowd-parent.iml" />
+    </modules>
+  </component>
+</project>
