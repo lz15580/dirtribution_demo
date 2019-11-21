@@ -37,7 +37,7 @@ public class MemberPO implements Serializable {
     /**
      * 0 企业 1个体 2个人 3政府
      */
-    private Byte acctype;
+    private Byte accttype;
 
     private static final long serialVersionUID = 1L;
 
@@ -113,12 +113,12 @@ public class MemberPO implements Serializable {
         this.cardnum = cardnum;
     }
 
-    public Byte getAcctype() {
-        return acctype;
+    public Byte getAccttype() {
+        return accttype;
     }
 
-    public void setAcctype(Byte acctype) {
-        this.acctype = acctype;
+    public void setAccttype(Byte accttype) {
+        this.accttype = accttype;
     }
 
     @Override
@@ -142,7 +142,7 @@ public class MemberPO implements Serializable {
             && (this.getUsertype() == null ? other.getUsertype() == null : this.getUsertype().equals(other.getUsertype()))
             && (this.getRealname() == null ? other.getRealname() == null : this.getRealname().equals(other.getRealname()))
             && (this.getCardnum() == null ? other.getCardnum() == null : this.getCardnum().equals(other.getCardnum()))
-            && (this.getAcctype() == null ? other.getAcctype() == null : this.getAcctype().equals(other.getAcctype()));
+            && (this.getAccttype() == null ? other.getAccttype() == null : this.getAccttype().equals(other.getAccttype()));
     }
 
     @Override
@@ -158,7 +158,7 @@ public class MemberPO implements Serializable {
         result = prime * result + ((getUsertype() == null) ? 0 : getUsertype().hashCode());
         result = prime * result + ((getRealname() == null) ? 0 : getRealname().hashCode());
         result = prime * result + ((getCardnum() == null) ? 0 : getCardnum().hashCode());
-        result = prime * result + ((getAcctype() == null) ? 0 : getAcctype().hashCode());
+        result = prime * result + ((getAccttype() == null) ? 0 : getAccttype().hashCode());
         return result;
     }
 
@@ -177,7 +177,7 @@ public class MemberPO implements Serializable {
         sb.append(", usertype=").append(usertype);
         sb.append(", realname=").append(realname);
         sb.append(", cardnum=").append(cardnum);
-        sb.append(", acctype=").append(acctype);
+        sb.append(", acctype=").append(accttype);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 // @EnableEurekaClient
-@MapperScan("com.atguigu.crowd.mapper")
+@MapperScan("com.demo.crowd.mapper")
 @EnableDiscoveryClient //更为通用
 @SpringBootApplication
 public class CrowdMainType {

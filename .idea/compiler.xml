@@ -26,7 +26,7 @@
       <module name="atcrowdfunding-admin-4-entity" target="1.5" />
       <module name="distribution-crowd-1-common" target="7" />
       <module name="distribution-crowd-2-registry-center" target="1.5" />
-      <module name="distribution-crowd-3-database-provider" target="1.5" />
+      <module name="distribution-crowd-3-database-provider" target="6" />
       <module name="distribution-crowd-4-redis-provider" target="1.5" />
       <module name="distribution-crowd-5-member-manager" target="1.5" />
       <module name="distribution-crowd-parent" target="1.5" />

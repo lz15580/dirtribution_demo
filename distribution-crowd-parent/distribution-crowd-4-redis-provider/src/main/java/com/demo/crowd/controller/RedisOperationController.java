@@ -92,7 +92,8 @@ public class RedisOperationController {
 		}
 
 		try {
-			String value = redisTemplate.opsForValue().get(normalKey);
+			String value = redisUtil.get(normalKey);
+//			String value = redisTemplate.opsForValue().get(normalKey);
 
 			return ResultEntity.successWithData(value);
 		} catch (Exception e) {
@@ -117,7 +118,8 @@ public class RedisOperationController {
 		}
 
 		try {
-			redisTemplate.delete(key);
+			redisUtil.del(key);
+//			redisTemplate.delete(key);
 
 			return ResultEntity.successNoData();
 		} catch (Exception e) {
