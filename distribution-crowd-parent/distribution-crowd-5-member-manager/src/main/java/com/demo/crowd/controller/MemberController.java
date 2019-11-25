@@ -103,7 +103,7 @@ public class MemberController {
         String memberId = memberPO.getId() + "";
 
         // 8.将token和memberId存入Redis
-        ResultEntity<String> resultEntitySaveToken = redisRemoteService.saveNormalStringKeyValue(token, memberId, 30);
+        ResultEntity<String> resultEntitySaveToken = redisRemoteService.saveNormalStringKeyValue(token, memberId, 3000000);
 
         if(ResultEntity.FAILED.equals(resultEntitySaveToken.getResult())) {
             return ResultEntity.failed(resultEntitySaveToken.getMessage());

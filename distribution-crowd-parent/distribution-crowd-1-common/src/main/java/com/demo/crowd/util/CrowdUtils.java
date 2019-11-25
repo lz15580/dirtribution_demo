@@ -20,7 +20,16 @@ public class CrowdUtils {
 		
 		return CrowdConstant.REDIS_MEMBER_SING_TOKEN_PREFIX + UUID.randomUUID().toString().replaceAll("-", "");
 	}
-	
+
+	/**
+	 * 根据不同前缀生成Redis中保存数据的key
+	 * @param prefix
+	 * @return
+	 */
+	public static String generateRedisKeyByPrefix(String prefix) {
+		return prefix + UUID.randomUUID().toString().replaceAll("-", "");
+	}
+
     /**
 	 * 验证集合是否有效
 	 * @param c		待验证集合

@@ -1,8 +1,10 @@
 package com.demo.crowd.api;
 
 import com.demo.crowd.entity.MemberPO;
+import com.demo.crowd.entity.ProjectVO;
 import com.demo.crowd.entity.ResultEntity;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,4 +20,9 @@ public interface DataBaseOperationRemoteService {
 
     @RequestMapping("/retrieve/member/by/login/acct")
     ResultEntity<MemberPO> retrieveMemberByLoginAcct(@RequestParam("loginAcct") String loginAcct);
+
+    @RequestMapping("/save/project/remote/{memberId}")
+    ResultEntity<String> saveProjectRemote(
+            @RequestBody ProjectVO projectVO,
+            @PathVariable("memberId") String memberId);
 }
